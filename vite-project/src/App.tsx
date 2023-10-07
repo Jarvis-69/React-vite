@@ -1,12 +1,15 @@
 import { Accordion } from "./components/accordion/Accordion";
 import { Navbar } from "./components/navbar/Navbar";
+import Calendar from "./components/calendar/Calendar";
+import 'tailwindcss/tailwind.css';
 
-function App() {
+
+export default function Main() {
   return (
-  <main>
-    <Accordion />
-    <Navbar />  
-  </main>) ;
+    <main>
+      <Navbar />
+      <Accordion />
+      <Calendar />
+    </main>
+  );
 }
-
-export default App;
