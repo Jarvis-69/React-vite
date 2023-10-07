@@ -1,7 +1,8 @@
 section {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  cursor: pointer;
+
 }
 
 article {
@@ -15,6 +16,7 @@ article {
   align-items: flex-end;
   opacity: 0.9;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 h2,
@@ -76,4 +78,22 @@ article img {
   translate: -50% -50%;
   height: 150%;
   filter: grayscale(0.5);
+}
+
+.icon {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 28px;
+  transition: 0.25s;
+}
+
+.text {
+  position: relative;
+  padding: 20px;
 }
