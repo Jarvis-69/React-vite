@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './styles.css';
 // import 'tailwindcss/tailwind.css';
 import { Menu, Transition } from '@headlessui/react'
@@ -10,10 +10,10 @@ import {
   endOfMonth,
   format,
   getDay,
-  isEqual,
+  // isEqual,
   isSameDay,
-  isSameMonth,
-  isToday,
+  // isSameMonth,
+  // isToday,
   parse,
   parseISO,
   startOfToday,
@@ -69,7 +69,7 @@ function classNames(...classes: string[]): string {
 
 function Calendar() {
   const today = startOfToday()
-  const [selectedDay, setSelectedDay] = useState(today)
+  const [selectedDay] = useState(today)
   const [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
   const firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date())
 
@@ -174,11 +174,46 @@ function Calendar() {
   );
 }
 
-function Meeting({ meeting }) {
-  let startDateTime = parseISO(meeting.startDatetime)
-  let endDateTime = parseISO(meeting.endDatetime)
+interface MeetingProps {
+  meeting: {
+    id: number;
+    name: string;
+    startDatetime: string;
+    endDatetime: string;
+    imageUrl: string;
+  };
+}
+
+function Meeting({ meeting }: MeetingProps) {
+  const startDateTime = parseISO(meeting.startDatetime);
+  const endDateTime = parseISO(meeting.endDatetime);
 
   return (
+    <>
+    <li className="flex items-center px-4 py-2 space-x-4 group rounded-xl focus-within:bg-gray-100 hover:bg-gray-100">
+      <img
+        src={meeting.imageUrl}
+        alt=""
+        className="flex-none w-10 h-10 rounded-full"
+      />
+      <div className="flex-auto">
+        <p className="text-gray-900">{meeting.name}</p>
+        <p className="mt-0.5">
+          <time dateTime={meeting.startDatetime}>
+            {format(startDateTime, 'h:mm a')}
+          </time>{' '}
+          -{' '}
+          <time dateTime={meeting.endDatetime}>
+            {format(endDateTime, 'h:mm a')}
+          </time>
+        </p>
+      </div>
+      <Menu
+        as="div"
+        className="relative opacity-0 focus-within:opacity-100 group-hover:opacity-100"
+      >
+      </Menu>
+    </li>
     <li className="flex items-center px-4 py-2 space-x-4 group rounded-xl focus-within:bg-gray-100 hover:bg-gray-100">
       <img
         src={meeting.imageUrl}
@@ -250,7 +285,8 @@ function Meeting({ meeting }) {
         </Transition>
       </Menu>
     </li>
-  )
+    </>
+  );
 }
 
 const colStartClasses = [
