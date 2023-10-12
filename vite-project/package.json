@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/anek-telugu": "^5.0.8",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
+    "@stitches/react": "^1.2.8",
     "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

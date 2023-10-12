@@ -1,5 +1,11 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@fontsource/anek-telugu": "^5.0.8",
+    "@stitches/react": "^1.2.8",
+    "dayjs": "^1.11.10",
+    "react-icons": "^4.11.0"
   }
 }
