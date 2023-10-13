@@ -1,11 +1,14 @@
 // import "@fontsource/anek-telugu";
 import { useCallback, useMemo, useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
+import "dayjs/locale/fr";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 import * as Styles from "./styles.ts";
 
-export const App = () => {
+dayjs.locale("fr");
+
+export const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState<Dayjs>(dayjs());
 
   const currentDay = useMemo(() => dayjs().toDate(), []);
@@ -16,7 +19,11 @@ export const App = () => {
   );
 
   const firstDayOfFirstWeekOfMonth = useMemo(
-    () => dayjs(firstDayOfTheMonth).startOf("week"),
+    () => {
+      // Commencez la semaine un lundi (1) et assurez-vous d'afficher les jours précédents si nécessaire
+      const firstDay = dayjs(firstDayOfTheMonth).startOf("week").day(1);
+      return firstDay.isAfter(firstDayOfTheMonth) ? firstDay.subtract(7, "days") : firstDay;
+    },
     [firstDayOfTheMonth]
   );
 
@@ -38,13 +45,16 @@ export const App = () => {
     return dates;
   }, []);
 
-
   const generateWeeksOfTheMonth = useMemo((): Date[][] => {
     const firstDayOfEachWeek = generateFirstDayOfEachWeek(
       firstDayOfFirstWeekOfMonth
     );
     return firstDayOfEachWeek.map((date) => generateWeek(date));
   }, [generateFirstDayOfEachWeek, firstDayOfFirstWeekOfMonth, generateWeek]);
+
+  const handleDateClick = (date: Dayjs) => {
+    setSelectedDate(date);
+  };
 
   return (
     <Styles.MainWrapper>
@@ -80,6 +90,7 @@ export const App = () => {
                   ? "today"
                   : "default"
               }
+              onClick={() => handleDateClick(dayjs(day))}
             >
               {day.getDate()}
             </Styles.CalendarDayCell>
