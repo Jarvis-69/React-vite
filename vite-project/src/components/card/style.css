@@ -141,14 +141,13 @@ ul {
   );
   transition: 400ms mask ease;
   will-change: mask;
-
-  width: 307.68%;
 }
 
 .overlay .card {
   background-color: hsla(var(--hsl), 0.15);
   border-color: hsla(var(--hsl), 1);
   box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+  flex-basis: calc(33.33% - 2.5em);
 }
 
 .overlay .cta {

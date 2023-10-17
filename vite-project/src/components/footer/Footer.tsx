@@ -77,7 +77,7 @@ function Footer() {
             </g>
         </svg>
         </div>
-        <section>
+        <section className='footer_section'>
         <ul className="socials">
             <li>
             <a className="fa-brands fa-facebook" />
