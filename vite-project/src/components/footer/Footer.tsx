@@ -3,7 +3,7 @@ import './style.css';
 function Footer() {
   return (
     <>
-    <footer>
+    <footer className='div_footer'>
         <div className="background">
         <svg
             version="1.1"
@@ -14,6 +14,7 @@ function Footer() {
             width="100%"
             height="100%"
             viewBox="0 0 1600 900"
+            className='svg_footer'
         >
             <defs>
             <linearGradient id="bg" x2="0%" y2="100%">
