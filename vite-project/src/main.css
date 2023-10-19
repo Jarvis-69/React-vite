@@ -1,17 +1,25 @@
-body {
+main body {
     margin: 0;
     padding: 0;
     font-family: "League Spartan", system-ui, sans-serif;
     font-size: 1.1rem;
     line-height: 1.2;
     color: #d6dfed;
-
     
     background-color: #1e1e1e;
     display: grid;
     place-items: center;
     box-sizing: border-box;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 
+}
+
+main {
     overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: "League Spartan", system-ui, sans-serif;
 }

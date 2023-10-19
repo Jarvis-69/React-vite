@@ -1,0 +1,73 @@
+.accueil {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    padding: 50px;
+    padding-top: 75px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.navbar_logo {
+    height: 300px;
+    margin-top: 200px;
+}
+
+.img_queries {
+    display: none;
+}
+
+.navbar_ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+.navbar_ul li a {
+    text-decoration: none;
+    color: #d6dfed;
+    /* text-transform: uppercase; */
+    font-size: 24px;
+}
+
+.navbar_ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -7.5px;
+    transition: 0.5s;
+}
+
+.navbar_ul li:hover:after {
+    width: 100%;
+}
+
+#burger {
+    display: none;
+}
+
+.navbar .burger {
+    display: none;
+}
+
+/* header {
+    background-image: url('./background.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+} */

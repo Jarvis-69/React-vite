@@ -92,7 +92,7 @@ function Footer() {
             <a className="fa-brands fa-instagram" />
             </li>
         </ul>
-        <ul className="links">
+        <ul className="footer_links">
             <li>
             <a>Home</a>
             </li>

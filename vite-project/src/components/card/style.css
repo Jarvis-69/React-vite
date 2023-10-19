@@ -31,6 +31,7 @@ ul {
 .main {
   max-width: 75rem;
   padding: 3em 1.5em;
+  overflow-y: hidden;
 }
 
 .main__heading {

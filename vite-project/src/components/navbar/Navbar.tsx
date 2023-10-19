@@ -1,38 +1,39 @@
-import "./styles.css";
-// import logo from "./logo.svg";
-import { useEffect, useRef, useState } from "react";
+import './style.css';
+import logo from './logo.png';
 
-export const Navbar = () => {
-  const lastScrollTop = useRef(0);
-
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (pageYOffset > lastScrollTop.current) {
-          // downward scroll
-          setIsNavbarVisible(false);
-        } else if (pageYOffset < lastScrollTop.current) {
-          // upward scroll
-          setIsNavbarVisible(true);
-        } // else was horizontal scroll
-        lastScrollTop.current = pageYOffset <= 0 ? 0 : pageYOffset;
-      },
-      { passive: true }
-    );
-  }, []);
-
+function Navbar() {
   return (
     <>
-      <nav className={`${isNavbarVisible ? "visible" : ""}`}>
-        <div className="nav-items">
-          <a href="#">Portfolio</a>
-          <a href="#">Skills</a>
-          <a href="#">About</a>
-        </div>
-      </nav>
+    <div className="accueil" id="accueil">
+        <input type="checkbox" id="burger" />
+        <label htmlFor="burger" className="menu">
+            <div className="top" />
+            <div className="middle" />
+            <div className="bottom" />
+        </label>
+        <nav className="navbar">
+            <img src={logo} className='navbar_logo'/>
+            <div className="nav-wrapper">
+                <ul className='navbar_ul'>
+                    <li>
+                    <a href="#accueil">Accueil</a>
+                    </li>
+                    <li>
+                    <a href="#histoire">Histoire</a>
+                    </li>
+                    <li>
+                    <a href="#telecharger">Telecharger</a>
+                    </li>
+                    <li>
+                    <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header></header>
+    </div>
     </>
-  );
-};
+    );
+}   
+
+export default Navbar;
