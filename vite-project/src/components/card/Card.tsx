@@ -10,43 +10,43 @@ function Card () {
   return (
     <>
       <main className="main flow">
-        <h1 className="main__heading">Pricing</h1>
+        <h1 className="main__heading">Les Séances</h1>
         <div className="main__cards cards">
           <div className="cards__inner">
             <div className="cards__card card">
-              <h2 className="card__heading">Basic</h2>
-              <p className="card__price">₹99.99</p>
+              <h2 className="card__heading">Enseignement</h2>
+              <p className="card__price">À partir de 25 €</p>
               <ul role="list" className="card__bullets flow">
-                <li>Access to standard workouts and nutrition plans</li>
-                <li>Email support</li>
+                <li>Cours ponctuel</li>
+                <li>Carte de 5 ou 10 cours</li>
+                <li>Forfait mensuel (1 à 2 cours par semaine)</li>
+                <li>Passage de galop</li>
               </ul>
               <a href="#basic" className="card__cta cta">
-                Get Started
+                Commencer l'enseignement
               </a>
             </div>
             <div className="cards__card card">
-              <h2 className="card__heading">Pro</h2>
-              <p className="card__price">₹399.99</p>
+              <h2 className="card__heading">Travail du cheval</h2>
+              <p className="card__price">À partir de 30 €</p>
               <ul role="list" className="card__bullets flow">
-                <li>Access to advanced workouts and nutrition plans</li>
-                <li>Priority Email support</li>
-                <li>Exclusive access to live Q&amp;A sessions</li>
+                <li>1 séance ponctuelle</li>
+                <li>Carte de 5 ou 10 cours</li>
+                <li>Forfait mensuel (1 à 5 séances par semaine)</li>
               </ul>
               <a href="#pro" className="card__cta cta">
-                Upgrade to Pro
+              Commencer le travail du cheval
               </a>
             </div>
             <div className="cards__card card">
-              <h2 className="card__heading">Ultimate</h2>
-              <p className="card__price">₹999.99</p>
+              <h2 className="card__heading">Autres prestations</h2>
+              <p className="card__price">Me contacter</p>
               <ul role="list" className="card__bullets flow">
-                <li>Access to all premium workouts and nutrition plans</li>
-                <li>24/7 Priority support</li>
-                <li>1-on-1 virtual coaching session every month</li>
-                <li>Exclusive content and early access to new features</li>
+                <li>Remplacement / Renfort de personnel</li>
+                <li>Gardiennage</li>
               </ul>
               <a href="#ultimate" className="card__cta cta">
-                Go Ultimate
+                Demande de devis
               </a>
             </div>
           </div>

@@ -19,10 +19,10 @@ function Navbar() {
                     <a href="#accueil">Accueil</a>
                     </li>
                     <li>
-                    <a href="#histoire">Histoire</a>
+                    <a href="#histoire">Disponibilités</a>
                     </li>
                     <li>
-                    <a href="#telecharger">Telecharger</a>
+                    <a href="#telecharger">Prix</a>
                     </li>
                     <li>
                     <a href="#contact">Contact</a>

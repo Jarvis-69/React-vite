@@ -94,16 +94,16 @@ function Footer() {
         </ul>
         <ul className="footer_links">
             <li>
-            <a>Home</a>
+            <a>Accueil</a>
             </li>
             <li>
-            <a>About</a>
+            <a>Disponibilités</a>
             </li>
             <li>
             <a>Services</a>
             </li>
             <li>
-            <a>Team</a>
+            <a>Prix</a>
             </li>
             <li>
             <a>Contact</a>
