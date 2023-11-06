@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 main body {
     margin: 0;
     padding: 0;
-    font-family: "League Spartan", system-ui, sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 1.1rem;
     line-height: 1.2;
     color: #d6dfed;

@@ -1,10 +1,13 @@
 .accueil {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./background2.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+
+    position: relative;
+    z-index: 1;
 }
 
 .navbar {
@@ -38,7 +41,6 @@
 .navbar_ul li a {
     text-decoration: none;
     color: #d6dfed;
-    /* text-transform: uppercase; */
     font-size: 24px;
 }
 
@@ -65,9 +67,33 @@
     display: none;
 }
 
-/* header {
-    background-image: url('./background.jpg');
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-} */
+.section {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 100vh; */
+    position: relative;
+    top: 250px;
+    overflow-y: hidden;
+}
+
+.section .h1_navbar {
+    transform: translateX(-100%);
+}
+
+.section .p_navbar {
+    transform: translateX(-100%);
+}
+
+.h1_navbar {
+    font-size: 90px;
+    color: #FFF;
+}
+
+.p_navbar {
+    font-size: 35px;
+    color: #0ef;
+    font-weight: 600;
+}
