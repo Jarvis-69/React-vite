@@ -1,22 +1,14 @@
 import './style.css';
 import logo from './logo.png';
+import { activateSectionsOnLoad } from './script';
+import { useEffect } from 'react';
 
 function Navbar() {
-    const sections = document.querySelectorAll('section');
 
-    window.onscroll = () => {
-        sections.forEach((section) => {
-            const top = window.scrollY;
-            const offset = section.offsetTop - 200;
-            const height = section.offsetHeight;
-
-            if (top >= offset && top < offset + height) {
-                section.classList.add('show-animate');
-            }
-            else {
-                section.classList.remove('show-animate');
-            }
-        })};
+    // Utilisez useEffect pour activer les sections lors du chargement
+    useEffect(() => {
+        activateSectionsOnLoad();
+    }, []);
 
     return (
         <>
@@ -47,9 +39,9 @@ function Navbar() {
                         </ul>
                     </div>
                 </nav>
-                <section className="section">
-                    <h1 className='h1_navbar'>Bonjour, Je suis Inola</h1>
-                    <p className='p_navbar'>Monitrice d'équitation</p>
+                <section className="sec-1 show-animate">
+                    <h1 className='animate'>Bonjour, Je suis Inola</h1>
+                    <p className='animate'>Monitrice d'équitation</p>
                 </section>
             </div>
         </>

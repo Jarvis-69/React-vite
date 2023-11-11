@@ -67,7 +67,7 @@
     display: none;
 }
 
-.section {
+.sec-1 {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -79,20 +79,24 @@
     overflow-y: hidden;
 }
 
-.section .h1_navbar {
+.sec-1 .animate {
     transform: translateX(-100%);
 }
 
-.section .p_navbar {
-    transform: translateX(-100%);
+.sec-1.show-animate .animate {
+    transform: translateX(0);
 }
 
-.h1_navbar {
+section .animate {
+    transition: 1s;
+}
+
+h1 {
     font-size: 90px;
     color: #FFF;
 }
 
-.p_navbar {
+p {
     font-size: 35px;
     color: #0ef;
     font-weight: 600;
