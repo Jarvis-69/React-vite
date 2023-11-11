@@ -7,18 +7,18 @@ import Navbar from "./components/navbar/Navbar";
 
 export default function Main() {
   return (
-    <main>
+    <>
       <header>
         <Navbar />
       </header>
-      <body>
+      <main>
         <Card />
         {/* <Accordion /> */}
         <Calendar />
-      </body>
+      </main>
       <footer>
         <Footer />
       </footer>
-    </main>
+    </>
   );
 }

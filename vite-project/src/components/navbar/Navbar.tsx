@@ -1,13 +1,13 @@
 import './style.css';
 import logo from './logo.png';
-import { activateSectionsOnLoad } from './script';
+import Script from './script.js';
 import { useEffect } from 'react';
 
 function Navbar() {
 
     // Utilisez useEffect pour activer les sections lors du chargement
     useEffect(() => {
-        activateSectionsOnLoad();
+        Script();
     }, []);
 
     return (
